@@ -1,6 +1,6 @@
 # TechJS | create-http
 
-A utility for initializing NodeJS projects written in TypeScript and compiled with Webpack.
+A utility for setting up [@techjs/http](https://github.com/technetiumjs/http) projects.
 
 ## Usage
 
