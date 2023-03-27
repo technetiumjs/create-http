@@ -1,9 +1,9 @@
 {
-  "name": "create-nodets",
+  "name": "@techjs/create-http",
   "version": "0.0.11",
   "description": "",
-  "main": "./dist/create-nodets",
-  "bin": "./dist/create-nodets",
+  "main": "./dist/create-http",
+  "bin": "./dist/create-http",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha src/*.spec.ts  src/**/*.spec.ts  src/**/**/*.spec.ts src/**/**/**/*.spec.ts src/**/**/**/**/*.spec.ts --recursive true --require node_modules/ts-node/register --exit",
     "test:watch": "npm run test -- --watch-extensions ts,spec.ts --watch",
@@ -16,18 +16,18 @@
     "docs": "node node_modules/typedoc/bin/typedoc --out docs/ src/ && echo '*\n!.gitignore' > docs/.gitignore",
     "migration:up": "npm run tsc && ./node_modules/.bin/typeorm migration:run",
     "migration:down": "npm run tsc && ./node_modules/.bin/typeorm migration:revert",
-    "postinstall": "mv packages/nodets/gitignore packages/nodets/.gitignore"
+    "postinstall": "mv packages/http/gitignore packages/http/.gitignore"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/johnfedoruk/create-nodets.git"
+    "url": "git+ssh://git@github.com/johnfedoruk/create-http.git"
   },
   "author": "John Fedoruk <johnny@johnfedoruk.ca> (https://johnfedoruk.ca/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/johnfedoruk/create-nodets/issues"
+    "url": "https://github.com/johnfedoruk/create-http/issues"
   },
-  "homepage": "https://github.com/johnfedoruk/create-nodets#readme",
+  "homepage": "https://github.com/johnfedoruk/create-http#readme",
   "dependencies": {
     "commander": "^8.0.0",
     "handlebars": "^4.5.3",
