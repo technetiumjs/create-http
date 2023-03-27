@@ -3,7 +3,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: './src/index.ts',
   output: {
-    filename: process.env.npm_package_main.split('/').reverse()[0],
+    filename: "create-http",
     libraryTarget: 'this'
   },
   target: 'node',
