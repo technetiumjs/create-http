@@ -1,6 +1,6 @@
 {
   "name": "@techjs/create-http",
-  "version": "0.0.11",
+  "version": "1.0.0",
   "description": "",
   "main": "./dist/create-http",
   "bin": "./dist/create-http",
