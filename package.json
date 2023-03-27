@@ -1,6 +1,7 @@
 {
   "name": "@techjs/create-http",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "private": false,
   "description": "",
   "main": "./dist/create-http",
   "bin": "./dist/create-http",
@@ -18,16 +19,19 @@
     "migration:down": "npm run tsc && ./node_modules/.bin/typeorm migration:revert",
     "postinstall": "mv packages/http/gitignore packages/http/.gitignore"
   },
+  "author": "John A. Fedoruk <johnny@johnfedoruk.ca> (http://johnfedoruk.ca)",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/johnfedoruk/create-http.git"
+    "url": "git+ssh://git@github.com/technetiumjs/create-http.git"
   },
-  "author": "John Fedoruk <johnny@johnfedoruk.ca> (https://johnfedoruk.ca/)",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/johnfedoruk/create-http/issues"
+    "url": "https://github.com/technetiumjs/create-http/issues"
   },
-  "homepage": "https://github.com/johnfedoruk/create-http#readme",
+  "homepage": "https://github.com/technetiumjs/create-http#readme",
   "dependencies": {
     "commander": "^8.0.0",
     "handlebars": "^4.5.3",
