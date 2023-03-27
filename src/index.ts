@@ -306,7 +306,7 @@ async function gitCommit(target_dir: string, message: string): Promise<string> {
 
   console.log();
   console.log('-------------------------------------------------------');
-  console.log('Welcome to the TSNode project generator');
+  console.log('Welcome to the @techjs project generator');
   console.log();
   console.log('Your project will be ready shortly');
   console.log('-------------------------------------------------------');
@@ -317,7 +317,7 @@ async function gitCommit(target_dir: string, message: string): Promise<string> {
   }
 
   const exe = basename(process.mainModule.filename);
-  const source_dir = join(dirname(dirname(process.mainModule.filename)), 'packages', 'nodets');
+  const source_dir = join(dirname(dirname(process.mainModule.filename)), 'packages', 'http');
   const version = await getVersion(source_dir);
 
   try {
@@ -326,7 +326,7 @@ async function gitCommit(target_dir: string, message: string): Promise<string> {
       .version(version)
       .name(exe)
       .usage('{<dir> | (-d|--dir) <directory>} [options...]')
-      .description('Send bulk email with distinct body, subject, and attachments')
+      .description('Setup a new @techjs/http REST framework in TypeScript')
       .argument('[dir]', 'Project directory')
       .option('-d, --dir <string>', 'Project directory')
       .option('--skip-status-check', 'Skip checking git status in CWD')
@@ -434,7 +434,7 @@ async function gitCommit(target_dir: string, message: string): Promise<string> {
       }
     }
   } catch (e) {
-    console.error(e.message);
+    console.error((e as Error).message);
     exit_code = 1;
   } finally {
     console.log('done.');
