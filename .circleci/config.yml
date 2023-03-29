@@ -315,7 +315,7 @@ jobs:
           at: ~/project
       - run:
           name: NPMRC
-          command: echo "_authToken=$NPM_TOKEN" > ".npmrc"
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ".npmrc"
       - run:
           name: Publish
           command: npm publish --access public
