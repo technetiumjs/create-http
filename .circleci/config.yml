@@ -74,7 +74,7 @@ workflows:
 jobs:
   checkout:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     working_directory: ~/project
     steps:
       - checkout
@@ -94,7 +94,7 @@ jobs:
             - ./
   env:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     working_directory: ~/project
     steps:
       - attach_workspace:
@@ -122,7 +122,7 @@ jobs:
             - .circleci
   dependencies:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     parameters:
       skip:
         description: "Skip Dependencies"
@@ -155,7 +155,7 @@ jobs:
             - node_modules
   test:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     parameters:
       skip:
         description: "Skip Unit Test"
@@ -176,7 +176,7 @@ jobs:
           command: npm run test
   e2e:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     parameters:
       skip:
         description: "Skip E2E Test"
@@ -197,7 +197,7 @@ jobs:
           command: npm run e2e
   lint:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     parameters:
       skip:
         description: "Skip Lint"
@@ -218,7 +218,7 @@ jobs:
           command: npm run lint
   audit:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     parameters:
       skip:
         description: "Skip Audit"
@@ -239,7 +239,7 @@ jobs:
           command: npm audit --production
   build:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     parameters:
       skip:
         description: "Skip Build"
@@ -285,7 +285,7 @@ jobs:
             - <<parameters.target>>
   deploy:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     parameters:
       skip:
         description: "Skip Deploy"
@@ -321,7 +321,7 @@ jobs:
           command: npm publish --access public
   master:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     parameters:
       skip:
         description: "Skip Master Update"
@@ -373,7 +373,7 @@ jobs:
             git push "$(echo $CIRCLE_REPOSITORY_URL | sed s/:/\\//g | sed s/git@/https\:\\/\\/${GITHUB_TOKEN}@/g)" master
   slack_msg:
     docker:
-      - image: circleci/node:18.15.0
+      - image: cimg/node:18.15.0
     parameters:
       skip:
         description: "Skip Slack Release Notification"
